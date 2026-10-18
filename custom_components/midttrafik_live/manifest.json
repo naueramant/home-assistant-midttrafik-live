@@ -1,0 +1,18 @@
+{
+  "domain": "midttrafik_live",
+  "name": "Midttrafik Live",
+  "codeowners": [
+    "@naueramant"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "http",
+    "lovelace"
+  ],
+  "documentation": "https://github.com/naueramant/home-assistant-midttrafik-live",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/naueramant/home-assistant-midttrafik-live/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

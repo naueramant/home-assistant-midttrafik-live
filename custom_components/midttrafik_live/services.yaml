@@ -1,0 +1,23 @@
+get_departures:
+  fields:
+    stop_number:
+      required: true
+      example: "751001602"
+      selector:
+        text:
+    at:
+      selector:
+        datetime:
+get_journey:
+  fields:
+    journey_ref:
+      required: true
+      selector:
+        text:
+search:
+  fields:
+    query:
+      required: true
+      example: "Banegårdsplads"
+      selector:
+        text:

@@ -1,0 +1,121 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Midttrafik Live",
+        "description": "What do you want to follow?",
+        "menu_options": {
+          "stop": "Departures from a stop",
+          "line": "Live vehicles on a line",
+          "area": "Live vehicles in an area"
+        }
+      },
+      "stop": {
+        "title": "Choose stop",
+        "description": "Search for a stop by name. Leave empty to list stops near your home.",
+        "data": {
+          "query": "Search"
+        }
+      },
+      "stop_select": {
+        "title": "Choose stop",
+        "data": {
+          "choice": "Stop"
+        }
+      },
+      "line": {
+        "title": "Choose line",
+        "description": "Search for a line number, e.g. 4A or L2.",
+        "data": {
+          "query": "Search"
+        }
+      },
+      "line_select": {
+        "title": "Choose line",
+        "data": {
+          "choice": "Line and direction"
+        }
+      },
+      "area": {
+        "title": "Choose area",
+        "description": "All buses and trams inside the circle will be shown.",
+        "data": {
+          "name": "Name",
+          "location": "Area"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach Midttrafik Live.",
+      "no_results": "Nothing found. Try another search."
+    },
+    "abort": {
+      "already_configured": "This is already set up."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Settings",
+        "data": {
+          "scan_interval": "Update interval",
+          "departure_sensors": "Number of departure sensors",
+          "lines": "Only these lines"
+        },
+        "data_description": {
+          "lines": "Leave empty to include all lines.",
+          "departure_sensors": "Departure 1 is enabled by default; enable the others under the device."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "upcoming_departures": {
+        "name": "Upcoming departures"
+      },
+      "departure": {
+        "name": "Departure {number}"
+      },
+      "vehicles": {
+        "name": "Vehicles"
+      }
+    }
+  },
+  "services": {
+    "get_departures": {
+      "name": "Get departures",
+      "description": "Get upcoming departures from any stop.",
+      "fields": {
+        "stop_number": {
+          "name": "Stop number",
+          "description": "Midttrafik stop number, e.g. 751001602."
+        },
+        "at": {
+          "name": "Time",
+          "description": "Show departures from this time instead of now."
+        }
+      }
+    },
+    "get_journey": {
+      "name": "Get journey",
+      "description": "Get all stops and times for a trip.",
+      "fields": {
+        "journey_ref": {
+          "name": "Journey reference",
+          "description": "The journey_ref attribute of a departure."
+        }
+      }
+    },
+    "search": {
+      "name": "Search",
+      "description": "Search for stops and lines.",
+      "fields": {
+        "query": {
+          "name": "Search",
+          "description": "Stop name or line number."
+        }
+      }
+    }
+  }
+}

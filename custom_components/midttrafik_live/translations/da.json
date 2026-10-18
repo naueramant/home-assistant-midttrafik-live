@@ -1,0 +1,121 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Midttrafik Live",
+        "description": "Hvad vil du følge?",
+        "menu_options": {
+          "stop": "Afgange fra et stoppested",
+          "line": "Live-køretøjer på en linje",
+          "area": "Live-køretøjer i et område"
+        }
+      },
+      "stop": {
+        "title": "Vælg stoppested",
+        "description": "Søg efter et stoppested. Lad feltet være tomt for at se stoppesteder nær dit hjem.",
+        "data": {
+          "query": "Søg"
+        }
+      },
+      "stop_select": {
+        "title": "Vælg stoppested",
+        "data": {
+          "choice": "Stoppested"
+        }
+      },
+      "line": {
+        "title": "Vælg linje",
+        "description": "Søg efter et linjenummer, f.eks. 4A eller L2.",
+        "data": {
+          "query": "Søg"
+        }
+      },
+      "line_select": {
+        "title": "Vælg linje",
+        "data": {
+          "choice": "Linje og retning"
+        }
+      },
+      "area": {
+        "title": "Vælg område",
+        "description": "Alle busser og letbaner inden for cirklen vises.",
+        "data": {
+          "name": "Navn",
+          "location": "Område"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Kunne ikke forbinde til Midttrafik Live.",
+      "no_results": "Intet fundet. Prøv en anden søgning."
+    },
+    "abort": {
+      "already_configured": "Dette er allerede sat op."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Indstillinger",
+        "data": {
+          "scan_interval": "Opdateringsinterval",
+          "departure_sensors": "Antal afgangssensorer",
+          "lines": "Kun disse linjer"
+        },
+        "data_description": {
+          "lines": "Lad være tom for at medtage alle linjer.",
+          "departure_sensors": "Afgang 1 er slået til som standard; de andre kan slås til under enheden."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "upcoming_departures": {
+        "name": "Kommende afgange"
+      },
+      "departure": {
+        "name": "Afgang {number}"
+      },
+      "vehicles": {
+        "name": "Køretøjer"
+      }
+    }
+  },
+  "services": {
+    "get_departures": {
+      "name": "Hent afgange",
+      "description": "Hent kommende afgange fra et stoppested.",
+      "fields": {
+        "stop_number": {
+          "name": "Stoppestedsnummer",
+          "description": "Midttrafiks stoppestedsnummer, f.eks. 751001602."
+        },
+        "at": {
+          "name": "Tidspunkt",
+          "description": "Vis afgange fra dette tidspunkt i stedet for nu."
+        }
+      }
+    },
+    "get_journey": {
+      "name": "Hent tur",
+      "description": "Hent alle stop og tider for en tur.",
+      "fields": {
+        "journey_ref": {
+          "name": "Turreference",
+          "description": "Attributten journey_ref fra en afgang."
+        }
+      }
+    },
+    "search": {
+      "name": "Søg",
+      "description": "Søg efter stoppesteder og linjer.",
+      "fields": {
+        "query": {
+          "name": "Søg",
+          "description": "Stoppestedsnavn eller linjenummer."
+        }
+      }
+    }
+  }
+}

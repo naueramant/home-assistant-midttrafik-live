@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "midttrafik-live"
+version = "0.1.0"
+description = "Async client for Midttrafik Live real-time bus and light rail data (Aarhus, Denmark)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["aiohttp>=3.8"]
+
+# The SDK lives inside the Home Assistant integration (single source of truth)
+# and is published from there as the `midttrafik_live` package.
+[tool.setuptools]
+packages = ["midttrafik_live"]
+
+[tool.setuptools.package-dir]
+midttrafik_live = "custom_components/midttrafik_live/api"
