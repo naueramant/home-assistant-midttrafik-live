@@ -10,6 +10,7 @@
   <a href="https://www.home-assistant.io"><img src="https://img.shields.io/badge/Home%20Assistant-2025.1%2B-18BCF2?logo=homeassistant&logoColor=white" alt="Home Assistant 2025.1+"></a>
   <img src="https://img.shields.io/badge/Lovelace%20cards-included-F2B300" alt="Lovelace cards included">
   <img src="https://img.shields.io/badge/API%20key-not%20needed-43A047" alt="No API key needed">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/naueramant/home-assistant-midttrafik-live" alt="MIT License"></a>
 </p>
 
 <p align="center">
@@ -252,3 +253,7 @@ imports it from there, and `pyproject.toml` builds the pip package from the same
 This is an unofficial community project. It is not affiliated with or endorsed
 by Midttrafik. It uses the same public API as the *Midttrafik Live* app, which
 can change without notice. Please keep update intervals reasonable.
+
+## 📄 License
+
+[MIT](LICENSE) © 2026 Jonas Tranberg

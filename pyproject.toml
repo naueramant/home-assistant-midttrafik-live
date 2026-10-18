@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=64"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,6 +8,8 @@ version = "0.1.0"
 description = "Async client for Midttrafik Live real-time bus and light rail data (Aarhus, Denmark)"
 readme = "README.md"
 requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
 dependencies = ["aiohttp>=3.8"]
 
 # The SDK lives inside the Home Assistant integration (single source of truth)
