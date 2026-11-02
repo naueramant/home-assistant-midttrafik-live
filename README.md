@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-Custom-41BDF5?logo=homeassistantcommunitystore&logoColor=white" alt="HACS Custom"></a>
+  <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-Default-41BDF5?logo=homeassistantcommunitystore&logoColor=white" alt="HACS Default"></a>
   <a href="https://www.home-assistant.io"><img src="https://img.shields.io/badge/Home%20Assistant-2025.1%2B-18BCF2?logo=homeassistant&logoColor=white" alt="Home Assistant 2025.1+"></a>
   <img src="https://img.shields.io/badge/Lovelace%20cards-included-F2B300" alt="Lovelace cards included">
   <img src="https://img.shields.io/badge/API%20key-not%20needed-43A047" alt="No API key needed">
@@ -113,9 +113,10 @@ Departure sensor 1 is enabled by default. Enable more on the device page.
 
 ### HACS (recommended)
 
-1. In HACS, open the menu (⋮) and choose **Custom repositories**.
-2. Add `https://github.com/naueramant/home-assistant-midttrafik-live` with type **Integration**.
-3. Search for **Midttrafik Live**, install it, and restart Home Assistant.
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=naueramant&repository=home-assistant-midttrafik-live&category=integration)
+
+1. Open **HACS** in Home Assistant and search for **Midttrafik Live** (if it doesn't appear yet, add `https://github.com/naueramant/home-assistant-midttrafik-live` under **⋮ → Custom repositories** as an **Integration**).
+2. Click **Download**, then restart Home Assistant.
 
 ### Manual
 
@@ -240,6 +241,7 @@ area or by line), search and seat occupancy. See [`example.py`](example.py).
 ```
 custom_components/midttrafik_live/
 ├── api/            # Python SDK (also the pip package `midttrafik_live`)
+├── brand/          # Integration icon and logos
 ├── frontend/       # Lovelace cards, registered automatically
 ├── translations/   # English and Danish
 └── *.py            # the integration
