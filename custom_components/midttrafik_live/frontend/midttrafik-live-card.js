@@ -325,6 +325,8 @@ class MidttrafikMapCard extends HTMLElement {
       // OpenStreetMap by default; tile_url / tile_attribution allow another provider.
       this._tiles = window.L.tileLayer(this._config.tile_url || "https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
+        // HA's page policy is same-origin, which strips the Referer; OSM blocks tile requests without one.
+        referrerPolicy: "strict-origin-when-cross-origin",
         attribution:
           this._config.tile_attribution ||
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
