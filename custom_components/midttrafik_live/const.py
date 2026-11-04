@@ -35,3 +35,4 @@ MIN_SCAN_INTERVAL: Final = 10
 LIGHT_RAIL_TRAFFIC_TYPE: Final = "070"
 
 FRONTEND_URL: Final = "/midttrafik_live/midttrafik-live-card.js"
+LEAFLET_URL: Final = "/midttrafik_live/leaflet"

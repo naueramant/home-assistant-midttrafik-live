@@ -259,3 +259,7 @@ can change without notice. Please keep update intervals reasonable.
 ## 📄 License
 
 [MIT](LICENSE) © 2026 Jonas Tranberg
+
+The map card bundles [Leaflet](https://leafletjs.com) 1.9.4
+([BSD-2-Clause](custom_components/midttrafik_live/frontend/leaflet/LICENSE)),
+served locally by the integration.

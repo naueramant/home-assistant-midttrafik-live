@@ -26,7 +26,7 @@ from homeassistant.loader import async_get_integration
 
 from .api import MidttrafikLiveClient, MidttrafikLiveError
 from .api.models import TZ
-from .const import CONF_ENTRY_TYPE, DOMAIN, FRONTEND_URL, TYPE_STOP
+from .const import CONF_ENTRY_TYPE, DOMAIN, FRONTEND_URL, LEAFLET_URL, TYPE_STOP
 from .coordinator import (
     MidttrafikConfigEntry,
     StopCoordinator,
@@ -50,13 +50,16 @@ async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Register the Lovelace cards and the integration's actions."""
     if hass.http is not None:
         integration = await async_get_integration(hass, DOMAIN)
+        frontend = Path(__file__).parent / "frontend"
         await hass.http.async_register_static_paths(
             [
                 StaticPathConfig(
                     FRONTEND_URL,
-                    str(Path(__file__).parent / "frontend" / "midttrafik-live-card.js"),
+                    str(frontend / "midttrafik-live-card.js"),
                     cache_headers=False,
-                )
+                ),
+                # Bundled Leaflet used by the map card; versioned by query string.
+                StaticPathConfig(LEAFLET_URL, str(frontend / "leaflet"), cache_headers=True),
             ]
         )
         await _async_register_card(hass, f"{FRONTEND_URL}?v={integration.version}")

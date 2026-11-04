@@ -7,7 +7,8 @@
 
 const ATTRIBUTION = "Data from Midttrafik Live";
 const LEAFLET_VERSION = "1.9.4";
-const LEAFLET_BASE = `https://unpkg.com/leaflet@${LEAFLET_VERSION}/dist`;
+// Bundled with the integration and served by it (see LEAFLET_URL in const.py).
+const LEAFLET_BASE = "/midttrafik_live/leaflet";
 
 const TEXT = {
   en: { now: "Now", min: "min", cancelled: "Cancelled", noDepartures: "No upcoming departures", unavailable: "Entity not available", noEntities: "No Midttrafik Live entities found" },
@@ -179,7 +180,7 @@ const loadLeaflet = () => {
   if (window.L) return Promise.resolve(window.L);
   leafletPromise ??= new Promise((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = `${LEAFLET_BASE}/leaflet.js`;
+    script.src = `${LEAFLET_BASE}/leaflet.js?v=${LEAFLET_VERSION}`;
     script.onload = () => resolve(window.L);
     script.onerror = () => {
       leafletPromise = undefined;
@@ -220,7 +221,7 @@ class MidttrafikMapCard extends HTMLElement {
     if (!this.shadowRoot) {
       this.attachShadow({ mode: "open" });
       this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="${LEAFLET_BASE}/leaflet.css">
+        <link rel="stylesheet" href="${LEAFLET_BASE}/leaflet.css?v=${LEAFLET_VERSION}">
         <style>
           ha-card { overflow: hidden; }
           .header { font-size: 1.15em; font-weight: 500; padding: 12px 16px; }
