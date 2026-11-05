@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "midttrafik-live"
-version = "0.1.2"
+version = "0.1.3"
 description = "Async client for Midttrafik Live real-time bus and light rail data (Aarhus, Denmark)"
 readme = "README.md"
 requires-python = ">=3.11"

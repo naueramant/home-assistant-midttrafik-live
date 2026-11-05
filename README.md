@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://hacs.xyz"><img src="https://img.shields.io/badge/HACS-Default-41BDF5?logo=homeassistantcommunitystore&logoColor=white" alt="HACS Default"></a>
-  <a href="https://www.home-assistant.io"><img src="https://img.shields.io/badge/Home%20Assistant-2025.1%2B-18BCF2?logo=homeassistant&logoColor=white" alt="Home Assistant 2025.1+"></a>
+  <a href="https://www.home-assistant.io"><img src="https://img.shields.io/badge/Home%20Assistant-2025.3%2B-18BCF2?logo=homeassistant&logoColor=white" alt="Home Assistant 2025.3+"></a>
   <img src="https://img.shields.io/badge/Lovelace%20cards-included-F2B300" alt="Lovelace cards included">
   <img src="https://img.shields.io/badge/API%20key-not%20needed-43A047" alt="No API key needed">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/naueramant/home-assistant-midttrafik-live" alt="MIT License"></a>
